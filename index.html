@@ -16,10 +16,13 @@
     <a class="brand" href="#inicio" aria-label="Ir para o início"><span>CO</span><strong>Camila Oliveira</strong></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
-      <li><a href="#inicio">Início</a></li><li><a href="#sobre">Sobre mim</a></li><li><a href="#resultados">Resultados</a></li>
-      <li><a href="#automacoes">Automações na prática</a></li><li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#habilidades">Habilidades</a></li><li><a href="#formacao">Formação</a></li>
-      <li><a href="#certificacoes">Certificações</a></li><li><a href="#contato">Contato</a></li>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#automacoes">Projetos</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#competencias">Competências</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
     <button class="theme-toggle" type="button" aria-label="Alternar modo claro e escuro" title="Alternar tema">◐</button>
   </nav>
@@ -32,25 +35,16 @@
       <h1>Camila Oliveira<br>da Conceição</h1>
       <h2>FP&amp;A | Automação Financeira | Inteligência Artificial &amp; Python</h2>
       <p class="lead">Transformando processos financeiros por meio de dados, automação e inteligência artificial.</p>
-      <div class="actions">
-        <a class="btn primary" href="#automacoes">Conheça minhas automações</a>
-        <a class="btn secondary" href="#contato">Entre em contato</a>
-        <a class="btn ghost cv-link" href="assets/documentos/Curriculo_Camila_Oliveira_Conceicao.docx" download>Baixar currículo</a>
-      </div>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/camila-conc/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="mailto:camilaoliveiraconceicao@gmail.com">E-mail</a>
-        <span>São Paulo, SP, Brasil</span>
-      </div>
+      <div class="actions"><a class="btn primary" href="#automacoes">Conheça minhas automações</a></div>
     </div>
-    <div class="hero-visual reveal" aria-label="Espaço para foto profissional">
+    <div class="hero-visual reveal" aria-label="Foto profissional de Camila Oliveira da Conceição">
       <div class="data-orbit orbit-one"></div><div class="data-orbit orbit-two"></div>
       <div class="photo-wrap"><img id="profilePhoto" src="assets/imagens/foto-perfil.jpg" alt="Foto profissional de Camila Oliveira da Conceição"><div class="photo-placeholder" id="photoPlaceholder"><span>CO</span><small>Foto profissional</small></div></div>
       <div class="metric-chip chip-a"><strong>FP&amp;A</strong><span>visão de negócio</span></div>
       <div class="metric-chip chip-b"><strong>Automação</strong><span>processos confiáveis</span></div>
     </div>
   </div>
-  <a class="scroll-cue" href="#sobre" aria-label="Continuar para a seção Sobre mim"><span></span></a>
+  <a class="scroll-cue" href="#sobre" aria-label="Continuar para Sobre mim"><span></span></a>
 </section>
 
 <section class="section" id="sobre"><div class="container about-grid">
@@ -60,11 +54,12 @@
     <p>Minha principal área de interesse é a aplicação de automação e inteligência artificial em processos financeiros. Utilizo Python, VBA, Excel, Power Query e Langflow para reduzir atividades manuais, aumentar a consistência das informações e transformar dados em análises relevantes para a tomada de decisão.</p>
     <p>Tenho experiência na construção de modelos financeiros, análise de variações, acompanhamento de indicadores e preparação de relatórios e apresentações para gestores e áreas de negócio.</p>
     <p>Busco combinar conhecimento financeiro, visão de processos e tecnologia para desenvolver soluções mais ágeis, rastreáveis e confiáveis.</p>
-    <a class="btn primary cv-link" href="assets/documentos/Curriculo_Camila_Oliveira_Conceicao.docx" download>Baixar currículo</a>
   </div>
 </div></section>
 
-<section class="section alt" id="resultados"><div class="container">
+<section class="section alt" id="atuacao"><div class="container"><p class="eyebrow">VISÃO INTEGRADA</p><h2>Áreas de atuação</h2><div class="expertise-grid" id="expertiseGrid"></div></div></section>
+
+<section class="section" id="resultados"><div class="container">
   <p class="eyebrow">IMPACTO MENSURÁVEL</p><h2>Resultados em números</h2>
   <div class="results-grid">
     <article class="result-card reveal"><strong class="counter" data-value="80" data-suffix="%">0%</strong><h3>Redução no tempo de reconciliações</h3><p>Automação de processos de reconciliação contábil com Inteligência Artificial, preservando a consistência e a integridade das informações.</p></article>
@@ -74,26 +69,50 @@
   </div>
 </div></section>
 
-<section class="section" id="atuacao"><div class="container"><p class="eyebrow">VISÃO INTEGRADA</p><h2>Áreas de atuação</h2><div class="expertise-grid" id="expertiseGrid"></div></div></section>
-
 <section class="section dark-section" id="automacoes"><div class="container">
-  <p class="eyebrow">ESTUDOS DE CASO</p><h2>Automações na prática</h2>
+  <h2>Automações na prática</h2>
   <p class="section-intro">Conheça algumas soluções desenvolvidas para reduzir atividades manuais, melhorar a consistência das informações e apoiar processos financeiros. As demonstrações utilizam dados fictícios e estruturas adaptadas para preservar a confidencialidade.</p>
   <div class="filters" role="group" aria-label="Filtrar projetos" id="filters"></div>
   <div class="projects-grid" id="projectsGrid"></div>
 </div></section>
 
-<section class="section" id="experiencia"><div class="container split-heading"><div><p class="eyebrow">TRAJETÓRIA</p><h2>Experiência</h2></div><div class="content-card reveal"><h3>Experiência profissional em FP&amp;A e transformação financeira</h3><p>Atuação em planejamento financeiro, fechamento, reconciliações, análise de P&amp;L, budget, forecast, consolidação de dados e automação de processos.</p><p class="muted">Esta área está preparada para receber cargos, empresas e períodos conforme as informações que Camila desejar publicar.</p></div></div></section>
+<section class="section" id="experiencia"><div class="container">
+  <p class="eyebrow">TRAJETÓRIA PROFISSIONAL</p><h2>Experiência</h2>
+  <div class="timeline">
+    <article class="timeline-item reveal"><div class="timeline-date">2025 – Atual</div><div class="timeline-card"><span class="company">IBM</span><h3>Analista FP&amp;A Júnior</h3><ul><li>Suporte ao planejamento financeiro, incluindo elaboração de budget e forecast.</li><li>Participação no fechamento financeiro e na reconciliação intercompany, identificando divergências e apoiando a consistência e a integridade das informações.</li><li>Análise mensal de P&amp;L, identificando variações de receita, custos e despesas.</li><li>Acompanhamento de indicadores financeiros e preparação de relatórios e apresentações de desempenho para gestores e áreas de negócio.</li><li>Consolidação e análise de dados e construção de modelos financeiros em Excel e IBM Planning Analytics (TM1)/Cognos.</li><li>Execução de análises de cenários e apoio à tomada de decisão das áreas de negócio.</li></ul></div></article>
+    <article class="timeline-item reveal"><div class="timeline-date">2023 – 2025</div><div class="timeline-card"><span class="company">IBM</span><h3>Estagiária em Finanças FP&amp;A</h3><ul><li>Automação de relatórios de reconciliação e de provisões de PIS, COFINS e CIDE utilizando IA e VBA.</li><li>Realização de reconciliação bancária, contribuindo para a consistência e a integridade das informações financeiras.</li><li>Criação e entrega da Newsletter Financeira Brasil, com análise de performance e insights trimestrais.</li><li>Suporte ao time de FP&amp;A com relatórios de centros de custo e reconciliações das operações LATAM.</li><li>Análise de despesas corporativas via CONCUR (LATAM), identificando gaps de conformidade e propondo melhorias.</li><li>Gestão de controles de provisão de tributos federais, garantindo acuracidade, consistência e rastreabilidade nos fechamentos mensais.</li></ul></div></article>
+    <article class="timeline-item reveal"><div class="timeline-date">2022 – 2023</div><div class="timeline-card"><span class="company">Legrand</span><h3>Estagiária em Compras Indiretas</h3><ul><li>Monitoramento de performance de fornecedores e negociação de termos comerciais, contribuindo para metas de savings.</li><li>Análise de indicadores econômicos, incluindo IPCA, IGP-M e câmbio, para suportar decisões de precificação.</li><li>Desenvolvimento de dashboards para acompanhamento de contratos e controle de savings.</li></ul></div></article>
+    <article class="timeline-item reveal"><div class="timeline-date">2021 – 2022</div><div class="timeline-card"><span class="company">Clínica Dr. Sun</span><h3>Assistente Administrativa / Recepção</h3><ul><li>Gestão de controle de exames e criação de relatórios operacionais diários.</li></ul></div></article>
+    <article class="timeline-item reveal"><div class="timeline-date">2017 – 2020</div><div class="timeline-card"><span class="company">CGR Elismol</span><h3>Aprendiz em Logística e Suporte de Vendas</h3><ul><li>Apoio à gestão de pedidos, análise de estoque e controle de notas fiscais.</li></ul></div></article>
+  </div>
+</div></section>
 
-<section class="section alt" id="habilidades"><div class="container"><p class="eyebrow">COMPETÊNCIAS</p><h2>Habilidades</h2><div class="skills-layout"><div class="skill-cloud" id="skillCloud"></div><div class="method-card reveal"><h3>Da identificação do problema ao resultado</h3><ol><li>Entendimento do processo financeiro</li><li>Mapeamento de riscos e atividades manuais</li><li>Desenho da solução e regras de negócio</li><li>Desenvolvimento e testes</li><li>Validação, documentação e melhoria contínua</li></ol></div></div></div></section>
+<section class="section alt" id="competencias"><div class="container"><p class="eyebrow">COMPETÊNCIAS</p><h2>Hard Skills &amp; Soft Skills</h2><div class="skills-layout"><article class="skills-card reveal"><h3>Hard Skills</h3><div class="skill-cloud" id="hardSkillCloud"></div></article><article class="skills-card reveal"><h3>Soft Skills</h3><div class="skill-cloud soft" id="softSkillCloud"></div></article></div></div></section>
 
-<section class="section" id="formacao"><div class="container split-heading"><div><p class="eyebrow">BASE ACADÊMICA</p><h2>Formação</h2></div><div class="content-card reveal"><h3>Formação acadêmica</h3><p>Seção preparada para inclusão do curso, instituição e período, sem publicar informações ainda não fornecidas.</p></div></div></section>
-<section class="section alt" id="certificacoes"><div class="container split-heading"><div><p class="eyebrow">APRENDIZADO CONTÍNUO</p><h2>Certificações</h2></div><div class="content-card reveal"><h3>Cursos e certificações</h3><p>Espaço reservado para certificações em finanças, dados, inteligência artificial e automação, a serem adicionadas com links de validação quando disponíveis.</p></div></div></section>
+<section class="section" id="formacao"><div class="container">
+  <p class="eyebrow">DESENVOLVIMENTO PROFISSIONAL</p><h2>Formação</h2>
+  <div class="education-grid">
+    <article class="education-card reveal"><span class="education-status">Concluído em junho de 2026</span><h3>Bacharelado em Administração de Empresas</h3><p>Universidade Paulista (UNIP)</p></article>
+    <article class="education-card reveal"><span class="education-status">Concluído em 2022</span><h3>Tecnólogo em Gestão da Cadeia de Suprimentos</h3><p>Universidade Paulista (UNIP)</p></article>
+  </div>
+  <div class="subsection"><h3>Certificações</h3><div class="cert-grid">
+    <article class="cert-card reveal"><span class="status progress">Em andamento</span><h4>FP&amp;A na Prática</h4><p>FP&amp;A na Prática</p></article>
+    <article class="cert-card reveal"><span class="status done">Concluído • 12/2025</span><h4>IA para Finanças</h4><p>Financ.IA</p></article>
+    <article class="cert-card reveal"><span class="status done">Concluído • 07/2025</span><h4>VBA &amp; Macros para Excel</h4><p>Trovato</p></article>
+    <article class="cert-card reveal"><span class="status done">Concluído • 03/2021</span><h4>Power BI Completo</h4><p>Udemy</p></article>
+    <article class="cert-card reveal"><span class="status done">40 horas</span><h4>Excel Avançado 2016</h4><p>Planilhas Profissionais</p></article>
+  </div></div>
+  <div class="two-column-subsections">
+    <div class="subsection"><h3>Idiomas</h3><div class="language-list"><span>Inglês <b>Intermediário</b></span><span>Espanhol <b>Básico</b></span><span>Francês <b>Básico</b></span></div></div>
+    <div class="subsection"><h3>Comunidades</h3><div class="community-grid">
+      <article class="community-card reveal"><div class="community-logo"><img src="assets/imagens/comunidades/ibef.png" alt="Logo IBEF" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>IBEF</span></div><div><h4>IBEF</h4><p>Member</p></div></article>
+      <article class="community-card reveal"><div class="community-logo"><img src="assets/imagens/comunidades/financia.png" alt="Logo Financ.IA" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>F.IA</span></div><div><h4>Financ.IA</h4><p>Member</p></div></article>
+    </div></div>
+  </div>
+</div></section>
 
-<section class="section contact" id="contato"><div class="container contact-grid"><div><p class="eyebrow">VAMOS CONVERSAR</p><h2>Finanças mais inteligentes começam com processos melhores.</h2><p>Entre em contato para conversar sobre FP&amp;A, automação financeira, dados e inteligência artificial aplicada a finanças.</p></div><div class="contact-card reveal"><a class="btn primary" href="mailto:camilaoliveiraconceicao@gmail.com">Enviar e-mail</a><a class="btn secondary" href="https://www.linkedin.com/in/camila-conc/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Acessar LinkedIn ↗</a><a class="btn ghost cv-link" href="assets/documentos/Curriculo_Camila_Oliveira_Conceicao.docx" download>Baixar currículo</a><small>São Paulo, SP, Brasil</small></div></div></section>
+<section class="section contact" id="contato"><div class="container contact-grid"><div><p class="eyebrow">CONTATO PROFISSIONAL</p><h2>Conecte-se comigo</h2><p>Acompanhe meu trabalho e conteúdos sobre finanças, FP&amp;A, automação e inteligência artificial.</p><div class="location">São Paulo, SP, Brasil</div></div><div class="contact-card reveal"><a class="btn primary" href="https://www.linkedin.com/in/camila-conc/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn secondary" href="mailto:camilaoliveiraconceicao@gmail.com">Enviar e-mail</a><a class="btn ghost cv-view" href="assets/documentos/Curriculo_Camila_Oliveira_Conceicao.pdf" target="_blank" rel="noopener noreferrer">Ver currículo ↗</a><a class="btn ghost cv-download" href="assets/documentos/Curriculo_Camila_Oliveira_Conceicao.pdf" download>Baixar currículo PDF ↓</a></div></div></section>
 </main>
 <footer><div class="container"><span>© <span id="year"></span> Camila Oliveira da Conceição</span><a href="#inicio">Voltar ao início ↑</a></div></footer>
-
 <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-panel" role="document"><button class="modal-close" type="button" data-close-modal aria-label="Fechar projeto">×</button><div id="modalContent"></div></div></div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body></html>
