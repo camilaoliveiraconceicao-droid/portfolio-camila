@@ -27,3 +27,90 @@ function setupModal(){document.getElementById('projectsGrid').addEventListener('
 function openProject(id){const p=projects.find(x=>x.id===id);if(!p)return;document.getElementById('modalContent').innerHTML=`<header class="case-hero"><p class="eyebrow">${p.categories.join(' • ')}</p><h2 id="modalTitle">${p.name}</h2><p>${p.description}</p></header><div class="case-content"><section class="case-section"><h3>Visão geral</h3><div class="case-summary"><div class="case-box"><strong>Status</strong><p>Demonstração em preparação</p></div><div class="case-box"><strong>Ferramentas</strong><p>${p.tools.join(', ')}</p></div><div class="case-box"><strong>Resultado alcançado</strong><p>${p.result}</p></div><div class="case-box"><strong>Categoria</strong><p>${p.categories.join(', ')}</p></div></div></section><section class="case-section"><h3>Demonstração na prática</h3><div class="demo-placeholder"><div><span class="visual-mark">⚙</span><strong>Demonstração em preparação</strong><p>${p.name}</p><button class="btn ghost" disabled>Vídeo disponível em breve</button></div></div></section><section class="case-section"><h3>Antes e depois</h3><div class="compare-grid"><div class="compare-card"><h4>Antes da automação</h4><ul>${p.before.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="compare-card"><h4>Depois da automação</h4><ul>${p.after.map(x=>`<li>${x}</li>`).join('')}</ul></div></div></section><section class="case-section"><h3>Problema identificado</h3><p>${p.problem}</p></section><section class="case-section"><h3>Mapeamento do processo</h3><div class="flow">${p.flow.map((x,i)=>`<span>${x}</span>${i<p.flow.length-1?'<b>→</b>':''}`).join('')}</div></section><section class="case-section"><h3>Como a solução foi construída</h3><div class="detail-grid"><div class="case-box"><h4>Estrutura</h4><p>Entradas, regras, processamento, validações e saídas são organizados em etapas separadas para facilitar testes, rastreabilidade e manutenção.</p></div><div class="case-box"><h4>Confidencialidade</h4><p>A apresentação utiliza dados fictícios e não publica código corporativo, credenciais, caminhos internos, dados pessoais ou informações financeiras confidenciais.</p></div></div></section><section class="case-section"><h3>Testes e validações</h3><ul class="checklist">${p.tests.map(x=>`<li>${x}</li>`).join('')}</ul></section></div>`;const modal=document.getElementById('projectModal');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');document.querySelector('.modal-close').focus()}
 function closeModal(){const modal=document.getElementById('projectModal');if(!modal.classList.contains('open'))return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('no-scroll')}
 function setupCv(){document.querySelectorAll('.cv-view,.cv-download').forEach(a=>a.href=CV_PATH)}
+/* ==========================================
+   AJUSTES CAMILA - FOTO E COMUNIDADES
+========================================== */
+
+/* Remove os elementos em volta da foto */
+
+.data-orbit,
+.orbit-one,
+.orbit-two,
+.metric-chip,
+.chip-a,
+.chip-b{
+    display:none !important;
+}
+
+/* Hero mais limpo */
+
+.hero-visual{
+    min-height:520px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Foto mais elegante */
+
+.photo-wrap{
+    width:min(360px,73vw);
+    border-radius:28px;
+    overflow:hidden;
+}
+
+.photo-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* Comunidades */
+
+.community-grid{
+    display:flex !important;
+    justify-content:center;
+    align-items:stretch;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.community-card{
+    min-width:260px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* Logos alinhados */
+
+.community-logo{
+    width:80px;
+    height:80px;
+    flex-shrink:0;
+    background:white;
+}
+
+.community-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:10px;
+}
+
+/* Mobile */
+
+@media(max-width:760px){
+
+    .community-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .community-card{
+        width:100%;
+        max-width:350px;
+    }
+
+}
