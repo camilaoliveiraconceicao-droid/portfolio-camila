@@ -86,3 +86,82 @@
     }
 
 }
+
+/* ========================================= */
+/* CORREÇÃO MOBILE - FOTO */
+/* ========================================= */
+
+@media (max-width:760px){
+
+    .metric-chip{
+        display:none !important;
+    }
+
+}
+
+/* ========================================= */
+/* COMUNIDADES */
+/* ========================================= */
+
+.community-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+}
+
+.community-card{
+    display:flex !important;
+    align-items:center !important;
+    gap:20px !important;
+
+    min-height:120px !important;
+
+    padding:24px !important;
+}
+
+.community-logo{
+    width:90px !important;
+    height:90px !important;
+
+    min-width:90px !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    background:#ffffff !important;
+
+    border-radius:18px !important;
+
+    overflow:hidden !important;
+}
+
+.community-logo img{
+    width:70px !important;
+    height:70px !important;
+
+    object-fit:contain !important;
+
+    display:block !important;
+}
+
+.community-card h4{
+    margin:0 0 6px 0 !important;
+    font-size:1.4rem !important;
+}
+
+.community-card p{
+    margin:0 !important;
+}
+
+@media (max-width:760px){
+
+    .chip-a,
+    .chip-b,
+    .metric-chip{
+        display:none !important;
+        visibility:hidden !important;
+        opacity:0 !important;
+    }
+
+}
