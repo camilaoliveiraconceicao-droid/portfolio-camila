@@ -39,7 +39,7 @@ function openProject(id){
                     aria-label="Demonstração do projeto ${p.name}"
                     style="width:100%; display:block; border-radius:18px; background:#000;"
                 >
-                    <source src="${p.video}" type="video/quicktime">
+                    <source src="${p.video}" type="video/mp4">
                     Seu navegador não suporta a reprodução de vídeos.
                 </video>
             </div>
