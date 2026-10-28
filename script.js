@@ -6,7 +6,7 @@ const expertise=[
 {icon:'D',title:'Business Intelligence e dados',items:['Power BI','Excel Avançado','SQL','Consolidação de dados','Dashboards','Indicadores financeiros','Tratamento de bases','Análise de dados']}];
 const projects=[
 {id:'reconciliacoes',name:'Automação de Reconciliações Financeiras',categories:['Accounting','Reconciliação'],description:'Automação aplicada à análise e reconciliação de informações financeiras e contábeis.',tools:['Inteligência Artificial','Python','Excel'],result:'80% de redução no tempo de reconciliações.',before:['Etapas de comparação executadas manualmente','Dependência de conferência manual','Maior exposição a divergências durante a análise'],after:['Tratamento automatizado das informações','Validações e identificação de divergências','Maior consistência, integridade e rastreabilidade'],problem:'O processo de reconciliação exigia análise manual de informações e conferências repetitivas. A solução foi estruturada para apoiar a comparação, a validação e a identificação de divergências.',flow:['Entrada dos dados','Tratamento da base','Aplicação das regras','Validação','Divergências','Relatório'],tests:['Comparação com o processo manual','Testes com bases menores','Validação das divergências identificadas','Revisão da consistência das saídas']},
-{id:'despesas',name:'Análise Inteligente de Despesas Corporativas',categories:['FP&A'],description:'Análise automatizada de despesas de cartão corporativo para indicar divergências e não conformidades.',tools:['Python','Inteligência Artificial','Excel'],result:'100% de eliminação do esforço manual na análise.',before:['Leitura e conferência manual das despesas','Análise individual de possíveis divergências','Dependência de revisão operacional'],after:['Análise automatizada das despesas','Sinalização de divergências e não conformidades','Saída organizada para revisão e acompanhamento'],problem:'A análise de despesas corporativas dependia de verificações manuais. A automação foi criada para estruturar a leitura dos dados e apoiar a identificação de exceções.',flow:['Importação da base','Padronização','Aplicação de critérios','Identificação de exceções','Organização dos resultados','Relatório'],tests:['Comparação com amostras revisadas manualmente','Teste de campos vazios e formatos diferentes','Validação de exceções sinalizadas','Revisão da saída consolidada']},
+{id:'despesas',name:'Análise Inteligente de Despesas Corporativas', video:'assets/videos/analise-despesas.mp4',categories:['FP&A'],description:'Análise automatizada de despesas de cartão corporativo para indicar divergências e não conformidades.',tools:['Python','Inteligência Artificial','Excel'],result:'100% de eliminação do esforço manual na análise.',before:['Leitura e conferência manual das despesas','Análise individual de possíveis divergências','Dependência de revisão operacional'],after:['Análise automatizada das despesas','Sinalização de divergências e não conformidades','Saída organizada para revisão e acompanhamento'],problem:'A análise de despesas corporativas dependia de verificações manuais. A automação foi criada para estruturar a leitura dos dados e apoiar a identificação de exceções.',flow:['Importação da base','Padronização','Aplicação de critérios','Identificação de exceções','Organização dos resultados','Relatório'],tests:['Comparação com amostras revisadas manualmente','Teste de campos vazios e formatos diferentes','Validação de exceções sinalizadas','Revisão da saída consolidada']},
 {id:'latam',name:'Consolidação Financeira LATAM',categories:['FP&A'],description:'Estrutura para consolidar bases financeiras de diferentes países e apoiar análises integradas.',tools:['VBA','Excel','Power Query','Langflow'],result:'Consolidação e análise de dados em uma estrutura padronizada.',before:['Bases separadas e formatos diferentes','Ajustes e consolidação manual','Conferências recorrentes antes da análise'],after:['Tratamento e padronização das bases','Consolidação estruturada','Informações organizadas para análise financeira'],problem:'A consolidação financeira precisava reunir informações de diferentes origens e estruturas. A solução organiza o tratamento e a combinação dos dados para apoiar uma leitura integrada.',flow:['Entrada por país','Padronização','Validação de campos','Consolidação','Conferência','Base final'],tests:['Teste por base de origem','Validação de campos obrigatórios','Conferência de totais antes e depois','Teste de atualização da consolidação']},
 {id:'tributos',name:'Automação de Provisões Tributárias',categories:['Accounting'],description:'Automação do ciclo de provisão de PIS, COFINS e CIDE e de reclassificações contábeis.',tools:['VBA','Excel','Power Query'],result:'Processo reduzido de dois dias para duas horas.',before:['Preparação manual das informações','Cálculos e reclassificações com várias etapas','Processo com duração de dois dias'],after:['Processamento automatizado das informações','Padronização dos cálculos e saídas','Conclusão do processo em duas horas'],problem:'O ciclo de provisões tributárias e reclassificações contábeis demandava diversas etapas operacionais. A automação reorganizou o fluxo para reduzir o tempo e padronizar o processamento.',flow:['Entrada dos dados','Tratamento','Aplicação das regras','Validação','Reclassificações','Saída final'],tests:['Comparação com o cálculo manual','Teste de valores positivos e negativos','Conferência de totais','Validação das reclassificações']},
 {id:'forecast',name:'Forecast Automatizado de Spending',categories:['FP&A','Forecast'],description:'Automação do forecast de spending para acelerar projeções e apoiar a análise financeira.',tools:['Python','Excel','Power Query'],result:'Execução reduzida de um dia para três horas, com 97% de acuracidade.',before:['Preparação manual da base de spending','Atualização das projeções em várias etapas','Processo com duração de um dia'],after:['Tratamento automatizado dos dados','Organização das premissas e projeções','Execução em três horas e saída estruturada'],problem:'O forecast de spending exigia preparação e atualização manual das informações. A solução automatiza etapas do processamento para acelerar a projeção e apoiar a análise das variações.',flow:['Base histórica','Tratamento','Premissas','Projeção','Validação','Forecast final'],tests:['Comparação do forecast com resultados realizados','Teste das premissas aplicadas','Validação de totais e períodos','Revisão da acuracidade das projeções']}];
@@ -24,6 +24,159 @@ function setupObservers(){const reduce=matchMedia('(prefers-reduced-motion: redu
 function animateCounter(el,reduce){const final=Number(el.dataset.value),suffix=el.dataset.suffix;if(reduce){el.textContent=final+suffix;return}const duration=1200,start=performance.now();function frame(now){const progress=Math.min((now-start)/duration,1),value=Math.round(final*(1-Math.pow(1-progress,3)));el.textContent=Math.min(value,final)+suffix;if(progress<1)requestAnimationFrame(frame);else el.textContent=final+suffix}requestAnimationFrame(frame)}
 function setupImageFallback(){const img=document.getElementById('profilePhoto'),ph=document.getElementById('photoPlaceholder');const fallback=()=>{img.style.display='none';ph.style.display='grid'};img.addEventListener('error',fallback);if(img.complete&&img.naturalWidth===0)fallback()}
 function setupModal(){document.getElementById('projectsGrid').addEventListener('click',e=>{const b=e.target.closest('.open-project');if(b)openProject(b.dataset.id)});document.querySelectorAll('[data-close-modal]').forEach(x=>x.addEventListener('click',closeModal));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()})}
-function openProject(id){const p=projects.find(x=>x.id===id);if(!p)return;document.getElementById('modalContent').innerHTML=`<header class="case-hero"><p class="eyebrow">${p.categories.join(' • ')}</p><h2 id="modalTitle">${p.name}</h2><p>${p.description}</p></header><div class="case-content"><section class="case-section"><h3>Visão geral</h3><div class="case-summary"><div class="case-box"><strong>Status</strong><p>Demonstração em preparação</p></div><div class="case-box"><strong>Ferramentas</strong><p>${p.tools.join(', ')}</p></div><div class="case-box"><strong>Resultado alcançado</strong><p>${p.result}</p></div><div class="case-box"><strong>Categoria</strong><p>${p.categories.join(', ')}</p></div></div></section><section class="case-section"><h3>Demonstração na prática</h3><div class="demo-placeholder"><div><span class="visual-mark">⚙</span><strong>Demonstração em preparação</strong><p>${p.name}</p><button class="btn ghost" disabled>Vídeo disponível em breve</button></div></div></section><section class="case-section"><h3>Antes e depois</h3><div class="compare-grid"><div class="compare-card"><h4>Antes da automação</h4><ul>${p.before.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="compare-card"><h4>Depois da automação</h4><ul>${p.after.map(x=>`<li>${x}</li>`).join('')}</ul></div></div></section><section class="case-section"><h3>Problema identificado</h3><p>${p.problem}</p></section><section class="case-section"><h3>Mapeamento do processo</h3><div class="flow">${p.flow.map((x,i)=>`<span>${x}</span>${i<p.flow.length-1?'<b>→</b>':''}`).join('')}</div></section><section class="case-section"><h3>Como a solução foi construída</h3><div class="detail-grid"><div class="case-box"><h4>Estrutura</h4><p>Entradas, regras, processamento, validações e saídas são organizados em etapas separadas para facilitar testes, rastreabilidade e manutenção.</p></div><div class="case-box"><h4>Confidencialidade</h4><p>A apresentação utiliza dados fictícios e não publica código corporativo, credenciais, caminhos internos, dados pessoais ou informações financeiras confidenciais.</p></div></div></section><section class="case-section"><h3>Testes e validações</h3><ul class="checklist">${p.tests.map(x=>`<li>${x}</li>`).join('')}</ul></section></div>`;const modal=document.getElementById('projectModal');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('no-scroll');document.querySelector('.modal-close').focus()}
+function openProject(id){
+    const p=projects.find(x=>x.id===id);
+    if(!p)return;
+
+    const demonstration=p.video
+        ? `
+            <div class="demo-video-wrapper">
+                <video
+                    class="project-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    aria-label="Demonstração do projeto ${p.name}"
+                    style="width:100%; display:block; border-radius:18px; background:#000;"
+                >
+                    <source src="${p.video}" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+          `
+        : `
+            <div class="demo-placeholder">
+                <div>
+                    <span class="visual-mark">⚙</span>
+                    <strong>Demonstração em preparação</strong>
+                    <p>${p.name}</p>
+                    <button class="btn ghost" disabled>
+                        Vídeo disponível em breve
+                    </button>
+                </div>
+            </div>
+          `;
+
+    const projectStatus=p.video
+        ? 'Demonstração disponível'
+        : 'Demonstração em preparação';
+
+    document.getElementById('modalContent').innerHTML=`
+        <header class="case-hero">
+            <p class="eyebrow">${p.categories.join(' • ')}</p>
+            <h2 id="modalTitle">${p.name}</h2>
+            <p>${p.description}</p>
+        </header>
+
+        <div class="case-content">
+
+            <section class="case-section">
+                <h3>Visão geral</h3>
+
+                <div class="case-summary">
+                    <div class="case-box">
+                        <strong>Status</strong>
+                        <p>${projectStatus}</p>
+                    </div>
+
+                    <div class="case-box">
+                        <strong>Ferramentas</strong>
+                        <p>${p.tools.join(', ')}</p>
+                    </div>
+
+                    <div class="case-box">
+                        <strong>Resultado alcançado</strong>
+                        <p>${p.result}</p>
+                    </div>
+
+                    <div class="case-box">
+                        <strong>Categoria</strong>
+                        <p>${p.categories.join(', ')}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h3>Demonstração na prática</h3>
+                ${demonstration}
+            </section>
+
+            <section class="case-section">
+                <h3>Antes e depois</h3>
+
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <h4>Antes da automação</h4>
+                        <ul>
+                            ${p.before.map(x=>`<li>${x}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="compare-card">
+                        <h4>Depois da automação</h4>
+                        <ul>
+                            ${p.after.map(x=>`<li>${x}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h3>Problema identificado</h3>
+                <p>${p.problem}</p>
+            </section>
+
+            <section class="case-section">
+                <h3>Mapeamento do processo</h3>
+
+                <div class="flow">
+                    ${p.flow.map((x,i)=>`
+                        <span>${x}</span>
+                        ${i<p.flow.length-1?'<b>→</b>':''}
+                    `).join('')}
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h3>Como a solução foi construída</h3>
+
+                <div class="detail-grid">
+                    <div class="case-box">
+                        <h4>Estrutura</h4>
+                        <p>
+                            Entradas, regras, processamento, validações e saídas são
+                            organizados em etapas separadas para facilitar testes,
+                            rastreabilidade e manutenção.
+                        </p>
+                    </div>
+
+                    <div class="case-box">
+                        <h4>Confidencialidade</h4>
+                        <p>
+                            A apresentação utiliza dados fictícios e não publica
+                            código corporativo, credenciais, caminhos internos,
+                            dados pessoais ou informações financeiras confidenciais.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-section">
+                <h3>Testes e validações</h3>
+
+                <ul class="checklist">
+                    ${p.tests.map(x=>`<li>${x}</li>`).join('')}
+                </ul>
+            </section>
+
+        </div>
+    `;
+
+    const modal=document.getElementById('projectModal');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('no-scroll');
+    document.querySelector('.modal-close').focus();
+}
 function closeModal(){const modal=document.getElementById('projectModal');if(!modal.classList.contains('open'))return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('no-scroll')}
 function setupCv(){document.querySelectorAll('.cv-view,.cv-download').forEach(a=>a.href=CV_PATH)}
